@@ -12,7 +12,7 @@ generate_video()
     ffmpeg -framerate $FRAMERATE -pattern_type glob -i '_timelapse*.jpg' -c:v libx264 $1
 }
 
-printf "Gnome Timelapse v0.1\n\n"
+printf "Gnome Timelapse\n\n"
 if [[ "$1" == "capture" ]]; then
     printf "Capturing timelapse...\n"
 
@@ -51,5 +51,5 @@ elif [[ "$1" == "video" ]]; then
         clean
     fi
 else
-    printf "How to use:\n\t ./timelapse.sh COMMAND [parameters]\n\n\tThis will start capturing. Press Ctrl+C to top the capturing and it will generate the final timelapse file.\n\nCommands:\n\t- clean\t\tCleans all the capture files in this directory\n\t- capture\tCaptures the timelapse\n\t\t - cps: Captures per second\n\t\t - [full|novideo]: 'full' means it will take the captures and then produce a video in the end the 'novideo' will not produce the video and keep the captures\n\t\t - filename:\tName of the output file\n\t - video\tMakes the video of all the captures in the current directory\n\nExample:\nTo capture a timelapse video of 1 frame per second, do:\n\t./timelapse capture 1 full out.mp4\n\n"
+    printf "How to use:\n\t ./timelapse.sh COMMAND [parameters]\n\n\tThis will start capturing. Press Ctrl+C to top the capturing and it will generate the final timelapse file.\n\nCommands:\n\t- clean\t\tCleans all the capture files in this directory\n\t- capture\tCaptures the timelapse\n\t\t\t- cps: Captures per second\n\t\t\t- [full|novideo]: 'full' means it will take the captures and then produce a video in the end the 'novideo' will not produce the video and keep the captures\n\t\t\t- filename: Name of the output file\n\t- video\t\tMakes the video of all the captures in the current directory\n\nExample:\nTo capture a timelapse video of 1 frame per second, do:\n\t./timelapse capture 1 full out.mp4\n\n"
 fi
