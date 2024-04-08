@@ -19,7 +19,7 @@ git clone git@github.com:CrociDB/gnome-timelapse && cd gnome-timelapse
 Now run it with the following parameters:
 
 ```shell
-./gnome-timelapse.sh capture .5 full timelapse.mp4
+./timelapse.sh capture .5 full timelapse.mp4
 ```
 
 This will capture `.5` screens per second (aka one screen every two seconds) and will remaing capturing until you cancel it by pressing **Ctrl+C**, then it will generate the video file.
