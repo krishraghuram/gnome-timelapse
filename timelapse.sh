@@ -28,7 +28,7 @@ if [[ "$1" == "capture" ]]; then
         sleep $waittime
 
         filename="_timelapse_$(echo '('`date +"%s.%N"` ' * 1000000)/1' | bc).jpg"
-        ./gnome-screenshot -f $filename
+        ./gnome-screenshot/build/src/gnome-screenshot -f $filename
     done
 
     if [[ "$full" == "full" ]]; then

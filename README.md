@@ -52,3 +52,15 @@ To capture a timelapse video of 1 frame per second, do:30
 ## Explanation
 
 This script uses `gnome-screenshot` to take screenshots and then uses `ffmpeg` to assemble a video file with the captures. The reason there's a custom version of `gnome-screenshot` is that in the original version of that software, you get a screen flash and a shutter sound on every capture, and it would be very annoying, so I edited that out of the source and rebuilt.
+
+# Notes
+
+https://crocidb.com/post/capturing-screen-timelapses-ubuntu-gnome-wayland/
+https://github.com/CrociDB/gnome-timelapse/tree/main
+Repo contains gnome-screenshot binary without source
+Decided to checkout the source, make the necessary changes to disable Flash and compile myself as explained here:
+        https://askubuntu.com/questions/854350/disable-gnome-screenshots-camera-flash-animation
+Also note you have to install `gettext`
+        https://gitlab.gnome.org/GNOME/gnome-network-displays/-/issues/140#note_879883
+
+

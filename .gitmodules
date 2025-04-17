@@ -1,0 +1,3 @@
+[submodule "gnome-screenshot"]
+	path = gnome-screenshot
+	url = https://github.com/krishraghuram/gnome-screenshot.git
